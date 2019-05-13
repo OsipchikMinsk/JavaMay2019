@@ -63,7 +63,7 @@ public class Ex2 {
         if (isPrimeNumber(number)) {
             System.out.println("1 " + number);
         } else {
-            System.out.print("Divisions of number " + number + "=>");
+            System.out.print("Divisions of number " + number + " => ");
             for (int i = 1; i <= number; i++) {
                 if (number % i == 0) {
                     System.out.print(i + "\t");
@@ -91,25 +91,91 @@ public class Ex2 {
 
     private static int differentNumbers(int a) { //task5
 
-        int count = 0;
+        int countOfDifferentNumbers = 0;
         int divisiorA;
-        int divisiorB;
-        divisiorA = a % 10;
-        a /= 10;
+        int one =0;
+        int two =0;
+        int three =0;
+        int four =0;
+        int five =0;
+        int six =0;
+        int seven =0;
+        int eight =0;
+        int nine =0;
+        int zero =0;
+
+
         while (a > 0) {
-            divisiorB = a % 10;
+            divisiorA = a % 10;
             a /= 10;
-            if (divisiorA != divisiorB) {
-                count++;
+
+            switch (divisiorA) {
+                case 1:
+                    one++;
+                    break;
+                case 2:
+                    two++;
+                    break;
+                case 3:
+                    three++;
+                    break;
+                case 4:
+                    four++;
+                    break;
+                case 5:
+                    five++;
+                    break;
+                case 6:
+                    six++;
+                    break;
+                case 7:
+                    seven++;
+                    break;
+                case 8:
+                    eight++;
+                    break;
+                case 9:
+                    nine++;
+                    break;
+                case 0:
+                    zero++;
+                    break;
             }
         }
-         if (count > 0) { //делаю проверку потому что ноль
-            count++;
-            return count;
-        } return count;
+            if (one>1){
+                one = 1;
+            }
+            if (two >1){
+                two = 1;
+            }
+            if (three >1){
+                three = 1;
+            }
+            if (four >1){
+                four = 1;
+            }
+            if (five >1){
+                five = 1;
+            }
+            if (six >1){
+                six = 1;
+            }
+            if (seven > 1) {
+                seven = 1;
+            }
+            if (eight > 1) {
+                eight = 1;
+            }
+            if (nine > 1) {
+                nine = 1;
+            }
+            if (zero > 1) {
+                zero = 1;
+            }
+            countOfDifferentNumbers = one + two + three + four +five + six + seven + eight + nine + zero;
+
+        return countOfDifferentNumbers;
     }
-
-
 
 
     public static void main(String[] args) {
@@ -121,18 +187,19 @@ public class Ex2 {
         System.out.println("Enter natural number");
         try {
             number1 = scanner.nextInt();
-            System.out.println("Greatest number=" + greatestNumber(number1) + " in your number:" + number1); //task 1
-            System.out.printf("Number %d" + isNumberPalindrome(number1), number1); //task2
-            System.out.printf("Is number %d  Prime=>" + isPrimeNumber(number1), number1); //task3
+            System.out.println("1=> Greatest number=" + greatestNumber(number1) + " in your number:" + number1); //task 1
+            System.out.printf("2=> Number %d" + isNumberPalindrome(number1), number1); //task2
+            System.out.printf("3=> Is number %d  Prime=>" + isPrimeNumber(number1), number1); //task3
             findAllDivisors(number1);// task4
-            System.out.println(differentNumbers(number1)); //
+            System.out.println();
+            System.out.println("5=>  Different  number of " + number1+ " " + differentNumbers(number1)); // task5
 
 
-            System.out.println("Input two numbers ");//task 6
-            a = scanner.nextInt();
-            b = scanner.nextInt();
-            System.out.printf("NOD of number %d&%d\t" + nOD(Math.abs(a), Math.abs(b)) + "\n", a, b); //task6
-            System.out.printf("NOK of number %d&%d\t" + nOk(Math.abs(a), Math.abs(b)), a, b); //task6
+            //System.out.println("Input two numbers ");//task 6
+           // a = scanner.nextInt();
+           // b = scanner.nextInt();
+            //System.out.printf("NOD of number %d&%d\t" + nOD(Math.abs(a), Math.abs(b)) + "\n", a, b); //task6
+            //System.out.printf("NOK of number %d&%d\t" + nOk(Math.abs(a), Math.abs(b)), a, b); //task6
 
 
         } catch (InputMismatchException e) {
