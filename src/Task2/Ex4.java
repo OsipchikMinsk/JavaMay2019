@@ -11,7 +11,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ex4 {
-    private static int sumOfAllDdivisiors(int number) { //task4
+    private static int sumOfAllDdivisiors(int number) {
         int summOfDivisiors = 0;
         for (int i = 1; i <= number / 2; i++) {
             if (number % i == 0) {

@@ -195,11 +195,11 @@ public class Ex2 {
             System.out.println("5=>  Different  number of " + number1+ " " + differentNumbers(number1)); // task5
 
 
-            //System.out.println("Input two numbers ");//task 6
-           // a = scanner.nextInt();
-           // b = scanner.nextInt();
-            //System.out.printf("NOD of number %d&%d\t" + nOD(Math.abs(a), Math.abs(b)) + "\n", a, b); //task6
-            //System.out.printf("NOK of number %d&%d\t" + nOk(Math.abs(a), Math.abs(b)), a, b); //task6
+            System.out.println("Input two numbers ");//task 6
+            a = scanner.nextInt();
+            b = scanner.nextInt();
+            System.out.printf("NOD of number %d&%d\t" + nOD(Math.abs(a), Math.abs(b)) + "\n", a, b); //task6
+            System.out.printf("NOK of number %d&%d\t" + nOk(Math.abs(a), Math.abs(b)), a, b); //task6
 
 
         } catch (InputMismatchException e) {
