@@ -1,4 +1,4 @@
-package Task2;
+package task2;
 
 /*
 * Необходимо написать программу «Heads or Tails?» («Орёл или решка?»),

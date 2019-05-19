@@ -1,4 +1,4 @@
-package Block1;
+package block1;
 
 /*
 * На плоскости даны два круга с общим центром и радиусами R1 и R2 (R1 &gt;
@@ -7,7 +7,7 @@ R2). Разработайте программу нахождения площа
 
 public class Ex3 {
 
-    public final static double PI = 3.141592654;
+    public final static double PI = 3.14;
 
     static double square(double a) {
         return a * a;

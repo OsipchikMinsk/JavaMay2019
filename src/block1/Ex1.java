@@ -1,4 +1,4 @@
-package Block1;
+package block1;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
