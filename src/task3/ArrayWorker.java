@@ -171,14 +171,17 @@ class ArrayWorker {
         return transposeMatrix;
     }
 
-    public  int[][] transposeSquareMatrix(int [][]matrix){
+    public int[][] transposeSquareMatrix(int[][] matrix) {
 
-        for (int i =0;i<arraySizeColumn;i++){
-            for (int j = i+1; j <arraySizeRow ; j++) {
-               int temp = matrix [i][j];
+        for (int i = 0; i < arraySizeColumn; i++) {
+            for (int j = i + 1; j < arraySizeRow; j++) {
+                int temp = matrix[i][j];
                 matrix[i][j] = matrix[j][i];
                 matrix[j][i] = temp;
             }
-        } return matrix;
+
+        }
+        printMatrix(matrix);
+        return matrix;
     }
 }

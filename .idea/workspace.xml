@@ -1,52 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4be4065-c9d2-45b0-9211-d533ceed74f5" name="Default" comment="task2">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/task3/ArrayWorker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/task3/Launcher.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Block1/Ex1.java" afterPath="$PROJECT_DIR$/src/block1/Ex1.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Block1/Ex2.java" afterPath="$PROJECT_DIR$/src/block1/Ex2.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Block1/Ex3.java" afterPath="$PROJECT_DIR$/src/block1/Ex3.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Block1/Ex4.java" afterPath="$PROJECT_DIR$/src/block1/Ex4.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Block1/Ex5.java" afterPath="$PROJECT_DIR$/src/block1/Ex5.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Block1/Ex6.java" afterPath="$PROJECT_DIR$/src/block1/Ex6.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Block1/Ex7.java" afterPath="$PROJECT_DIR$/src/block1/Ex7.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Block1/block/ex1.jpg" afterPath="$PROJECT_DIR$/src/block1/diagrams/ex1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Block1/block/ex2.jpg" afterPath="$PROJECT_DIR$/src/block1/diagrams/ex2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Block1/block/ex3.jpg" afterPath="$PROJECT_DIR$/src/block1/diagrams/ex3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Block1/block/ex4.jpg" afterPath="$PROJECT_DIR$/src/block1/diagrams/ex4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Block1/block/ex5.jpg" afterPath="$PROJECT_DIR$/src/block1/diagrams/ex5.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Block1/block/ex6.jpg" afterPath="$PROJECT_DIR$/src/block1/diagrams/ex6.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Block1/block/ex7.jpg" afterPath="$PROJECT_DIR$/src/block1/diagrams/ex7.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Block2/Ex1.java" afterPath="$PROJECT_DIR$/src/block2/Ex1.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Block2/Ex2.java" afterPath="$PROJECT_DIR$/src/block2/Ex2.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Block2/Ex3.java" afterPath="$PROJECT_DIR$/src/block2/Ex3.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Block2/Ex4.java" afterPath="$PROJECT_DIR$/src/block2/Ex4.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Task2/Diagrams/ex1.png" afterPath="$PROJECT_DIR$/src/task2/Diagrams/ex1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Task2/Diagrams/ex2.1.png" afterPath="$PROJECT_DIR$/src/task2/Diagrams/ex2.1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Task2/Diagrams/ex2.2.png" afterPath="$PROJECT_DIR$/src/task2/Diagrams/ex2.2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Task2/Diagrams/ex2.3.png" afterPath="$PROJECT_DIR$/src/task2/Diagrams/ex2.3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Task2/Diagrams/ex2.4.png" afterPath="$PROJECT_DIR$/src/task2/Diagrams/ex2.4.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Task2/Diagrams/ex2.5.png" afterPath="$PROJECT_DIR$/src/task2/Diagrams/ex2.5.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Task2/Diagrams/ex2.6.png" afterPath="$PROJECT_DIR$/src/task2/Diagrams/ex2.6.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Task2/Diagrams/ex3.png" afterPath="$PROJECT_DIR$/src/task2/Diagrams/ex3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Task2/Diagrams/ex4.png" afterPath="$PROJECT_DIR$/src/task2/Diagrams/ex4.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Task2/Ex1.java" afterPath="$PROJECT_DIR$/src/task2/Ex1.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Task2/Ex2.java" afterPath="$PROJECT_DIR$/src/task2/Ex2.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Task2/Ex3.java" afterPath="$PROJECT_DIR$/src/task2/Ex3.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Task2/Ex4.java" afterPath="$PROJECT_DIR$/src/task2/Ex4.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IntroductionToJava/Block1/Ex1.class" afterPath="$PROJECT_DIR$/out/production/IntroductionToJava/Block1/Ex1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IntroductionToJava/Block1/Ex2.class" afterPath="$PROJECT_DIR$/out/production/IntroductionToJava/Block1/Ex2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IntroductionToJava/Block1/Ex3.class" afterPath="$PROJECT_DIR$/out/production/IntroductionToJava/Block1/Ex3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IntroductionToJava/Block1/Ex4.class" afterPath="$PROJECT_DIR$/out/production/IntroductionToJava/Block1/Ex4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IntroductionToJava/Block1/Ex5.class" afterPath="$PROJECT_DIR$/out/production/IntroductionToJava/Block1/Ex5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IntroductionToJava/Block1/Ex6.class" afterPath="$PROJECT_DIR$/out/production/IntroductionToJava/Block1/Ex6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IntroductionToJava/Block1/Ex7.class" afterPath="$PROJECT_DIR$/out/production/IntroductionToJava/Block1/Ex7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IntroductionToJava/Block2/Ex1.class" afterPath="$PROJECT_DIR$/out/production/IntroductionToJava/Block2/Ex1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IntroductionToJava/Block2/Ex2.class" afterPath="$PROJECT_DIR$/out/production/IntroductionToJava/Block2/Ex2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IntroductionToJava/Block2/Ex3.class" afterPath="$PROJECT_DIR$/out/production/IntroductionToJava/Block2/Ex3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/IntroductionToJava/Block2/Ex4.class" afterPath="$PROJECT_DIR$/out/production/IntroductionToJava/Block2/Ex4.class" />
+    <list default="true" id="c4be4065-c9d2-45b0-9211-d533ceed74f5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/task3/ArrayWorker.java" afterPath="$PROJECT_DIR$/src/task3/ArrayWorker.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -109,8 +66,8 @@
       <file leaf-file-name="ArrayWorker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/task3/ArrayWorker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="823">
+              <caret line="170" column="22" lean-forward="false" selection-start-line="170" selection-start-column="22" selection-end-line="170" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -151,7 +108,7 @@
       <file leaf-file-name="Launcher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/task3/Launcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-117">
+            <state relative-caret-position="-64">
               <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
@@ -523,7 +480,7 @@
       <workItem from="1557854932362" duration="1037000" />
       <workItem from="1558083666784" duration="11373000" />
       <workItem from="1558108376958" duration="11825000" />
-      <workItem from="1558255456616" duration="16704000" />
+      <workItem from="1558255456616" duration="17222000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit">
       <created>1557317453652</created>
@@ -553,11 +510,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557856165074</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="task3">
+      <created>1558279263834</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1558279263834</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152780000" />
+    <option name="totallyTimeSpent" value="153298000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -629,7 +593,8 @@
     <MESSAGE value="task2" />
     <MESSAGE value="task2 end" />
     <MESSAGE value="DiagramsTask2" />
-    <option name="LAST_COMMIT_MESSAGE" value="DiagramsTask2" />
+    <MESSAGE value="task3" />
+    <option name="LAST_COMMIT_MESSAGE" value="task3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1170,7 +1135,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/task3/Launcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-117">
+        <state relative-caret-position="-64">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
@@ -1178,8 +1143,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/task3/ArrayWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="823">
+          <caret line="170" column="22" lean-forward="false" selection-start-line="170" selection-start-column="22" selection-end-line="170" selection-end-column="22" />
           <folding />
         </state>
       </provider>
