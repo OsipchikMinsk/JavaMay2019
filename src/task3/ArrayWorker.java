@@ -23,8 +23,8 @@ import java.util.Random;
 class ArrayWorker {
 
     Random random = new Random();
-    int arraySizeColumn;
-    int arraySizeRow;
+    private int arraySizeColumn;
+    private int arraySizeRow;
     private final int VALUE_NOT_FOUND = -1;
 
 

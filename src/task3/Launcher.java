@@ -13,7 +13,7 @@ public class Launcher {
 
         int n = 0;
         int m = 0;
-        while ((m <= 0) && (n <= 0)) {   //вводит число, пока оно не будет >0
+        while ((m <= 0) && (n <= 0)) {   //User вводит числа, пока оно не будет >0
             System.out.println("Enter Width > 0 ");
             m = scanner.nextInt();
             while (m <= 0) {
@@ -35,8 +35,17 @@ public class Launcher {
         System.out.println("Min element:" + arrayWorker.getMinElement(arrayRandom));
         System.out.println("Arithmetic Middle:" + arrayWorker.getArithmeticMiddle(arrayRandom));
         System.out.println("Geometric Middle:" + arrayWorker.getGeometricMiddle(arrayRandom));
-        System.out.println(arrayWorker.getIndexOfLocalMinimumInMatrix(arrayRandom));
-        System.out.println(arrayWorker.getIndexOfLocalMaximumInArray(arrayRandom));
+        if (arrayWorker.getIndexOfLocalMaximumInArray(arrayRandom) == -1) {
+            System.out.println("LocalMaximumInArray NOT FOUND");
+        } else {
+            System.out.println(arrayWorker.getIndexOfLocalMinimumInMatrix(arrayRandom));
+        }
+        if (arrayWorker.getIndexOfLocalMaximumInArray(arrayRandom) == -1) {
+            System.out.println("LocalMaximumInArray NOT FOUND");
+        } else {
+            System.out.println(arrayWorker.getIndexOfLocalMinimumInMatrix(arrayRandom));
+        }
+
         arrayWorker.transposeMatrix(arrayRandom);
         System.out.println();
         int[][] myArray = {{2, 2, 2, 2, -10,11},
