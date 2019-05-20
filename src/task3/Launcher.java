@@ -25,7 +25,6 @@ public class Launcher {
         } else {
             System.out.println(arrayWorker.getIndexOfLocalMinimumInMatrix(arrayRandom));
         }
-
         arrayWorker.transposeMatrix(arrayRandom);
        /* System.out.println();  //матрица для теста раскомментировать многострочный комментарий
         int[][] myArray = {{2, 2, 2, 2, -10, 11},

@@ -3,10 +3,10 @@ package task3;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class UserInput {
-    Scanner scanner = new Scanner(System.in);
+ class UserInput {
+   private Scanner scanner = new Scanner(System.in);
 
-    public int setSizeMatrix() {
+     int setSizeMatrix() {
         int n = 0;
         while ((n <= 0)) {
             System.out.println("Enter size of Matrix N:M.  Number must be > 0!!!");
@@ -23,10 +23,10 @@ public class UserInput {
     }
 
     private boolean isFirst = true; //явояется ли число последним
-    int start = 0; //старт рандомного числа
-    int finish = 0;  //конец диапазана рандомного числа
+    private int start = 0; //старт рандомного числа
+    private int finish = 0;  //конец диапазана рандомного числа
 
-    public int setRandomNumber() { //метод задает от кого и до какого числа
+     int setRandomNumber() { //метод задает от кого и до какого числа
         if (isFirst) {
             System.out.println("Enter start value of random number in Matrix");
             try {

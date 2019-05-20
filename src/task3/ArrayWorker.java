@@ -105,7 +105,8 @@ class ArrayWorker {
                 }
                 geometricMiddle = geometricMiddle * matrix[i][j];
             }
-        }return Math.pow(Math.abs(geometricMiddle),1.0d/(arraySizeColumn *arraySizeRow));
+        }
+        return Math.pow(Math.abs(geometricMiddle),1.0d/(arraySizeColumn *arraySizeRow));
     }
 
     /*3 найти позицию первого встретившегося локального минимума
@@ -162,7 +163,7 @@ class ArrayWorker {
         return matrix;
     }
 
-    public int[][] transposeRectangleMatrix(int[][] matrix) {
+     int[][] transposeRectangleMatrix(int[][] matrix) {
         calculateArrayLengths(matrix);
         int[][] transposeMatrix = new int[arraySizeRow][arraySizeColumn];
         for (int i = 0; i < arraySizeColumn; i++) {
