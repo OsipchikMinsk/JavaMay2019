@@ -8,8 +8,8 @@ public class Launcher {
     public static void main(String[] args) {
         ArrayWorker arrayWorker = new ArrayWorker();
         UserInput user = new UserInput();
-        int[][] arrayRandom = new int[user.setSizeMatrix()][user.setSizeMatrix()];  //пользователь вводит с клавиатуры диапазаон рандомного числа
-        arrayWorker.setRandomElementInMatrix(arrayRandom, user.setRandomNumber(), user.setRandomNumber());
+        int[][] arrayRandom = new int[user.setSizeMatrix()][user.setSizeMatrix()];  //пользователь вводит с клавиатуры размер матрицы
+        arrayWorker.setRandomElementInMatrix(arrayRandom, user.setRandomNumber(), user.setRandomNumber());//пользователь вводит с клавиатуры диапазаон рандомного числа
         arrayWorker.printMatrix(arrayRandom);
         System.out.println("Max element:" + arrayWorker.getMaxElement(arrayRandom));
         System.out.println("Min element:" + arrayWorker.getMinElement(arrayRandom));
