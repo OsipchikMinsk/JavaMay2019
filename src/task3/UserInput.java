@@ -24,12 +24,13 @@ public class UserInput {
         return n;
     }
 
-    int count = 0; //счетчик на фининшное число
+
+    private boolean isFirst = true; //явояется ли число последним
     int start = 0; //старт рандомного числа
     int finish = 0;  //конец диапазана рандомного числа
 
     public int setRandomNumber() { //метод задает от кого и до какого числа
-        if (count == 0) {
+        if (isFirst) {
             System.out.println("Enter start value of random number in Matrix");
             try {
                 start = scanner.nextInt();
@@ -37,7 +38,7 @@ public class UserInput {
                 System.out.print("Only numbers are allowed. Please check your input. ");
                 e.printStackTrace();
             }
-            count++;
+            isFirst=false;
             return start;
 
         } else {
@@ -61,7 +62,7 @@ public class UserInput {
 
                 }
             }
-            count = 0;  //для иниверсальности дальнейшего ввода
+            isFirst=true;  //для иниверсальности дальнейшего ввода
             return finish;
         }
     }

@@ -1,7 +1,7 @@
 package task3;
 
 
-import java.util.Scanner;
+
 
 public class Launcher {
 
@@ -17,12 +17,12 @@ public class Launcher {
         System.out.println("Arithmetic Middle:" + arrayWorker.getArithmeticMiddle(arrayRandom));
         System.out.println("Geometric Middle:" + arrayWorker.getGeometricMiddle(arrayRandom));
 
-        if (arrayWorker.getIndexOfLocalMaximumInArray(arrayRandom) == -1) {  //чтобы было понятно что такое -1
+        if (arrayWorker.getIndexOfLocalMaximumInArray(arrayRandom) == ArrayWorker.VALUE_NOT_FOUND) {  //чтобы было понятно что такое -1
             System.out.println("LocalMaximumInArray NOT FOUND");
         } else {
             System.out.println(arrayWorker.getIndexOfLocalMaximumInArray(arrayRandom));
         }
-        if (arrayWorker.getIndexOfLocalMinimumInMatrix(arrayRandom) == -1) { //чтобы было понятно что такое -1
+        if (arrayWorker.getIndexOfLocalMinimumInMatrix(arrayRandom) == ArrayWorker.VALUE_NOT_FOUND) { //чтобы было понятно что такое -1
             System.out.println("LocalMaximumInArray NOT FOUND");
         } else {
             System.out.println(arrayWorker.getIndexOfLocalMinimumInMatrix(arrayRandom));

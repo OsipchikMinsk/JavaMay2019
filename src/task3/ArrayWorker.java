@@ -22,10 +22,10 @@ import java.util.Random;
 
 class ArrayWorker {
 
-    Random random = new Random();
+    private Random random = new Random();
     private int arraySizeColumn;
     private int arraySizeRow;
-    private final int VALUE_NOT_FOUND = -1;
+    static final int VALUE_NOT_FOUND = -1;
 
 
     private void calculateArrayLengths(int[][] array) { //подсчет горизонтальных и вериткальных ячеек
@@ -40,10 +40,9 @@ class ArrayWorker {
         /*@param finishRandom  конечный диапазон рандомного числа
         * */
         calculateArrayLengths(array);
-        //finishRandom-=startRandom;
         for (int i = 0; i < arraySizeColumn; i++) {
             for (int j = 0; j < arraySizeRow; j++) {
-                array[i][j] = startRandom + random.nextInt((finishRandom+1)-startRandom);
+                array[i][j] = startRandom + random.nextInt((finishRandom + 1) - startRandom);
             }
         }
     }
@@ -61,7 +60,7 @@ class ArrayWorker {
             элементы) данной матрицы;*/
 
 
-    public int getMaxElement(int[][] matrix) {   //поиск максимального элемента
+    int getMaxElement(int[][] matrix) {   //поиск максимального элемента
         int maxElement = 0;
         calculateArrayLengths(matrix);
         for (int i = 0; i < arraySizeColumn; i++) {
@@ -75,7 +74,7 @@ class ArrayWorker {
         return maxElement;
     }
 
-    public int getMinElement(int[][] matrix) {  //поиск минимального элемента
+    int getMinElement(int[][] matrix) {  //поиск минимального элемента
         int minElement = matrix[0][0];
         calculateArrayLengths(matrix);
         for (int i = 0; i < arraySizeColumn; i++) {
@@ -159,19 +158,6 @@ class ArrayWorker {
 
     }
 
-
-    public int[][] transposeRectangleMatrix(int[][] matrix) {
-        calculateArrayLengths(matrix);
-        int[][] transposeMatrix = new int[arraySizeRow][arraySizeColumn];
-        for (int i = 0; i < arraySizeColumn; i++) {
-            for (int j = 0; j < arraySizeRow; j++) {
-                transposeMatrix[j][i] = matrix[i][j];
-            }
-        }
-        printMatrix(transposeMatrix);
-        return transposeMatrix;
-    }
-
     public int[][] transposeSquareMatrix(int[][] matrix) {
 
         for (int i = 0; i < arraySizeColumn; i++) {
@@ -185,4 +171,17 @@ class ArrayWorker {
         printMatrix(matrix);
         return matrix;
     }
+
+    public int[][] transposeRectangleMatrix(int[][] matrix) {
+        calculateArrayLengths(matrix);
+        int[][] transposeMatrix = new int[arraySizeRow][arraySizeColumn];
+        for (int i = 0; i < arraySizeColumn; i++) {
+            for (int j = 0; j < arraySizeRow; j++) {
+                transposeMatrix[j][i] = matrix[i][j];
+            }
+        }
+        printMatrix(transposeMatrix);
+        return transposeMatrix;
+    }
+
 }
