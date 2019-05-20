@@ -6,7 +6,6 @@ package task3;
 public class Launcher {
 
     public static void main(String[] args) {
-
         ArrayWorker arrayWorker = new ArrayWorker();
         UserInput user = new UserInput();
         int[][] arrayRandom = new int[user.setSizeMatrix()][user.setSizeMatrix()];  //пользователь вводит с клавиатуры диапазаон рандомного числа
@@ -16,7 +15,6 @@ public class Launcher {
         System.out.println("Min element:" + arrayWorker.getMinElement(arrayRandom));
         System.out.println("Arithmetic Middle:" + arrayWorker.getArithmeticMiddle(arrayRandom));
         System.out.println("Geometric Middle:" + arrayWorker.getGeometricMiddle(arrayRandom));
-
         if (arrayWorker.getIndexOfLocalMaximumInArray(arrayRandom) == ArrayWorker.VALUE_NOT_FOUND) {  //чтобы было понятно что такое -1
             System.out.println("LocalMaximumInArray NOT FOUND");
         } else {

@@ -27,13 +27,10 @@ class ArrayWorker {
     private int arraySizeRow;
     static final int VALUE_NOT_FOUND = -1;
 
-
     private void calculateArrayLengths(int[][] array) { //подсчет горизонтальных и вериткальных ячеек
-
         arraySizeColumn = array.length;      //вертикаль
         arraySizeRow = array[0].length;   //горизонталь
     }
-
 
     void setRandomElementInMatrix(int[][] array, int startRandom, int finishRandom) { //заполняет матрицу в вводимом диапозоне пользователя
         /*@param startRandom  начальный диапазон рандомного числа
@@ -59,7 +56,6 @@ class ArrayWorker {
     /*1 найти экстремальные значения (минимальный и максимальный
             элементы) данной матрицы;*/
 
-
     int getMaxElement(int[][] matrix) {   //поиск максимального элемента
         int maxElement = 0;
         calculateArrayLengths(matrix);
@@ -69,7 +65,6 @@ class ArrayWorker {
                     maxElement = matrix[i][j];
                 }
             }
-
         }
         return maxElement;
     }
@@ -83,25 +78,24 @@ class ArrayWorker {
                     minElement = matrix[i][j];
                 }
             }
-
         }
         return minElement;
     }
 
     /*2 найти среднеарифметическое и среднегеометрическое значения всех
 элементов матрицы;*/
-    public double getArithmeticMiddle (int [][] matrix){   //Арифметическое среднее
+     double getArithmeticMiddle (int [][] matrix){   //Арифметическое среднее
         double arithmeticMiddle = 0;
         calculateArrayLengths(matrix);
         for (int i = 0; i < arraySizeColumn; i++) {
             for (int j =0;j<arraySizeRow;j++){
                 arithmeticMiddle = arithmeticMiddle + matrix[i][j];
             }
-        }return arithmeticMiddle/(arraySizeColumn *arraySizeRow);
+        }
+        return arithmeticMiddle/(arraySizeColumn *arraySizeRow);
     }
 
-
-    public double getGeometricMiddle (int [][] matrix){ //Геометрическое среднее
+     double getGeometricMiddle (int [][] matrix){ //Геометрическое среднее
         double geometricMiddle = 1.0d;
         calculateArrayLengths(matrix);
         for (int i = 0; i < arraySizeColumn; i++) {
@@ -117,7 +111,7 @@ class ArrayWorker {
     /*3 найти позицию первого встретившегося локального минимума
 (максимума)*/
 
-    public int getIndexOfLocalMinimumInMatrix(int[][] matrix) {  //поиск локального мининмума
+     int getIndexOfLocalMinimumInMatrix(int[][] matrix) {  //поиск локального мининмума
         calculateArrayLengths(matrix);
         int penultimateIndex = arraySizeRow-1; //предпоследний индекс справа
         for (int i = 0; i < arraySizeColumn; i++) {
@@ -127,11 +121,11 @@ class ArrayWorker {
                     return matrix[i][j];
                 }
             }
-        }return VALUE_NOT_FOUND;
-
+        }
+        return VALUE_NOT_FOUND;
     }
 
-    public int getIndexOfLocalMaximumInArray(int[][] matrix) {  //поиск локального максимума
+     int getIndexOfLocalMaximumInArray(int[][] matrix) {  //поиск локального максимума
         calculateArrayLengths(matrix);
         int penultimateIndex = arraySizeRow-1;  //предпоследний индекс справа
         for (int i = 0; i < arraySizeColumn; i++) {
@@ -143,30 +137,26 @@ class ArrayWorker {
             }
         }
         return VALUE_NOT_FOUND;
-
     }
     /*4 транспонировать матрицу (при решении данного задания не
             рекомендуется задействовать дополнительную память)*/
 
-    public int [][] transposeMatrix (int [][] matrix){
+     int [][] transposeMatrix (int [][] matrix){
         calculateArrayLengths(matrix);
         if (arraySizeColumn==arraySizeRow){
             return transposeSquareMatrix(matrix);
         } else {
             return  transposeRectangleMatrix(matrix);
         }
-
     }
 
-    public int[][] transposeSquareMatrix(int[][] matrix) {
-
+     int[][] transposeSquareMatrix(int[][] matrix) {
         for (int i = 0; i < arraySizeColumn; i++) {
             for (int j = i + 1; j < arraySizeRow; j++) {
                 int temp = matrix[i][j];
                 matrix[i][j] = matrix[j][i];
                 matrix[j][i] = temp;
             }
-
         }
         printMatrix(matrix);
         return matrix;

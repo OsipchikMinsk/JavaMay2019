@@ -7,7 +7,6 @@ public class UserInput {
     Scanner scanner = new Scanner(System.in);
 
     public int setSizeMatrix() {
-
         int n = 0;
         while ((n <= 0)) {
             System.out.println("Enter size of Matrix N:M.  Number must be > 0!!!");
@@ -19,11 +18,9 @@ public class UserInput {
                 System.out.println("Tray again");
                 n = scanner.nextInt();
             }
-
         }
         return n;
     }
-
 
     private boolean isFirst = true; //явояется ли число последним
     int start = 0; //старт рандомного числа
@@ -40,7 +37,6 @@ public class UserInput {
             }
             isFirst=false;
             return start;
-
         } else {
             System.out.println("Enter finish value of random number in Matrix, your number must be > than first number");
             try {
@@ -59,7 +55,6 @@ public class UserInput {
                         e.printStackTrace();
                         break;
                     }
-
                 }
             }
             isFirst=true;  //для иниверсальности дальнейшего ввода
