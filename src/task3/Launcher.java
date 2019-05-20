@@ -8,47 +8,29 @@ public class Launcher {
     public static void main(String[] args) {
 
         ArrayWorker arrayWorker = new ArrayWorker();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter size of Matrix N:M.  Number must be > 0!!!");
-
-        int n = 0;
-        int m = 0;
-        while ((m <= 0) && (n <= 0)) {   //User вводит числа, пока оно не будет >0
-            System.out.println("Enter Width > 0 ");
-            m = scanner.nextInt();
-            while (m <= 0) {
-                System.out.println("Tray again");
-                m = scanner.nextInt();
-            }
-            System.out.println("Enter Height > 0 ");
-            n = scanner.nextInt();
-            while (n <= 0) {
-            System.out.println("Tray again");
-            n = scanner.nextInt();
-        }
-    }
-        int[][] arrayRandom = new int[m][n];
-
-        arrayWorker.setRandomElementInMatrix(arrayRandom, 10, 50);
+        UserInput user = new UserInput();
+        int[][] arrayRandom = new int[user.setSizeMatrix()][user.setSizeMatrix()];  //пользователь вводит с клавиатуры диапазаон рандомного числа
+        arrayWorker.setRandomElementInMatrix(arrayRandom, user.setRandomNumber(), user.setRandomNumber());
         arrayWorker.printMatrix(arrayRandom);
         System.out.println("Max element:" + arrayWorker.getMaxElement(arrayRandom));
         System.out.println("Min element:" + arrayWorker.getMinElement(arrayRandom));
         System.out.println("Arithmetic Middle:" + arrayWorker.getArithmeticMiddle(arrayRandom));
         System.out.println("Geometric Middle:" + arrayWorker.getGeometricMiddle(arrayRandom));
-        if (arrayWorker.getIndexOfLocalMaximumInArray(arrayRandom) == -1) {
+
+        if (arrayWorker.getIndexOfLocalMaximumInArray(arrayRandom) == -1) {  //чтобы было понятно что такое -1
             System.out.println("LocalMaximumInArray NOT FOUND");
         } else {
-            System.out.println(arrayWorker.getIndexOfLocalMinimumInMatrix(arrayRandom));
+            System.out.println(arrayWorker.getIndexOfLocalMaximumInArray(arrayRandom));
         }
-        if (arrayWorker.getIndexOfLocalMaximumInArray(arrayRandom) == -1) {
+        if (arrayWorker.getIndexOfLocalMinimumInMatrix(arrayRandom) == -1) { //чтобы было понятно что такое -1
             System.out.println("LocalMaximumInArray NOT FOUND");
         } else {
             System.out.println(arrayWorker.getIndexOfLocalMinimumInMatrix(arrayRandom));
         }
 
         arrayWorker.transposeMatrix(arrayRandom);
-        System.out.println();
-        int[][] myArray = {{2, 2, 2, 2, -10,11},
+       /* System.out.println();  //матрица для теста раскомментировать многострочный комментарий
+        int[][] myArray = {{2, 2, 2, 2, -10, 11},
                            {2, 2, 42, 2, 1, 1},
                            {2, 2, 1, 2, 2, 36}};
         arrayWorker.printMatrix(myArray);
@@ -59,6 +41,6 @@ public class Launcher {
         System.out.println(arrayWorker.getIndexOfLocalMinimumInMatrix(myArray));
         System.out.println(arrayWorker.getIndexOfLocalMaximumInArray(myArray));
         arrayWorker.transposeMatrix(myArray);
-
+*/
     }
 }

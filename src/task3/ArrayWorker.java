@@ -35,14 +35,15 @@ class ArrayWorker {
     }
 
 
-    void setRandomElementInMatrix(int[][] array, int startRandom, int finishRandom) {
+    void setRandomElementInMatrix(int[][] array, int startRandom, int finishRandom) { //заполняет матрицу в вводимом диапозоне пользователя
         /*@param startRandom  начальный диапазон рандомного числа
         /*@param finishRandom  конечный диапазон рандомного числа
         * */
         calculateArrayLengths(array);
+        //finishRandom-=startRandom;
         for (int i = 0; i < arraySizeColumn; i++) {
             for (int j = 0; j < arraySizeRow; j++) {
-                array[i][j] = startRandom + random.nextInt(finishRandom);
+                array[i][j] = startRandom + random.nextInt((finishRandom+1)-startRandom);
             }
         }
     }
