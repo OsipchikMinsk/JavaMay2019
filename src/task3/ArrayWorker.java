@@ -152,6 +152,7 @@ class ArrayWorker {
     }
 
      int[][] transposeSquareMatrix(int[][] matrix) {
+         calculateArrayLengths(matrix);
         for (int i = 0; i < arraySizeColumn; i++) {
             for (int j = i + 1; j < arraySizeRow; j++) {
                 int temp = matrix[i][j];
