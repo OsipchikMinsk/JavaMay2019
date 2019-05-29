@@ -32,8 +32,8 @@ public class SectionAggregation {
 
     @Override
     public String toString() {
-        return "SectionAggregation{" +
-                "lengthOfSectionAggregation=" + lengthOfSectionAggregation +
+        return "SectionAggregation {" +
+                "lengthOfSectionAggregation= " + lengthOfSectionAggregation +
                 '}';
     }
 }

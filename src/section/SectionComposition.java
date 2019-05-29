@@ -6,8 +6,6 @@ import java.math.RoundingMode;
 
 public class SectionComposition extends Point {
 
-
-
     private int endX;
     private int endY;
 
@@ -16,7 +14,7 @@ public class SectionComposition extends Point {
     public SectionComposition(Point a, Point b) {
         super(a.getX(), a.getY());
 
-         this.endX = b.getX();
+        this.endX = b.getX();
         this.endY = b.getY();
     }
 
@@ -26,10 +24,6 @@ public class SectionComposition extends Point {
         this.endY = endY;
     }
 
-//    public SectionComposition(int startX, int startY, int endX, int endY) {
-//        super(startX, startY);
-//        this.pointEnd = new Point(endX, endY);
-//    }
 
 
     public double calculateDistanceComp(){
@@ -58,8 +52,8 @@ public class SectionComposition extends Point {
 
     @Override
     public String toString() {
-        return "SectionComposition{" +
-                "sectionCompositionDistance=" + sectionCompositionDistance +
+        return "SectionComposition {" +
+                "sectionCompositionDistance= " + sectionCompositionDistance +
                 '}';
 
 

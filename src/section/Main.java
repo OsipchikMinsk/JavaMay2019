@@ -10,11 +10,16 @@ public class Main {
 
         SectionAggregation ab = new SectionAggregation(a, b);
         ab.calculateDistance(a, b);
-        // System.out.println(ab.getLengthOfSectionComposition());
+        //System.out.println(ab.getLengthOfSectionComposition());
         System.out.println(ab.toString());
+        SectionAggregation aC = new SectionAggregation(a,c);
+        aC.calculateDistance(a,c);
+        //System.out.println(aC.getLengthOfSectionComposition());
+        System.out.println(aC.toString());
+
         SectionComposition ac = new SectionComposition(1, 1, 10, 10);
         ac.calculateDistanceComp();
-        // System.out.println(ac.getSectionCompositionDistance());
+        //System.out.println(ac.getSectionCompositionDistance());
         System.out.println(ac.toString());
         SectionComposition ad = new SectionComposition(a, c);
         ad.calculateDistanceComp();

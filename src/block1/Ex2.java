@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Ex2 {
 
     static long calculateInMg(int m) {
-        return m * 1_000_000;
+        return m * 1000000;
     }
 
     static int calculateInGr(int m) {
