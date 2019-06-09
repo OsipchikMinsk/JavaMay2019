@@ -3,23 +3,19 @@ package cheefcook.entity.vagetables;
 import cheefcook.entity.Vegetable;
 
 public class GreenVegetable extends Vegetable {
-    final private int KEEPING_TIME = 10;
+    private final int KEEPING_TIME = 20; //Время хранения в днях
 
-    public GreenVegetable(String name,double kiloCalories) {
-
-        super(name,kiloCalories);
-    }
-    public GreenVegetable(){
-
+    public GreenVegetable(String name, int weightInGr, double kiloCalories) {
+        super(name,weightInGr,kiloCalories);
     }
 
     public int getKeepingTime() {
         return KEEPING_TIME;
     }
 
-   public enum listOfGreenVegetable {
-        PARSLEY,   //петрушка
-        LETTUCE,  //Салат
-        ARAGULA  //Руккола
-   }
+    public enum listOfGreenVegetable {
+        PARSLEY,
+        LETTUCE,
+        ARAGULA
+    }
 }

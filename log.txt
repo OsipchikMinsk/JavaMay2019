@@ -1,0 +1,24 @@
+2019-06-09 18:49:33 WARN  implementations.ParsingFileServiceImpl:74 - Test Logger
+2019-06-09 19:25:06 WARN  service.LoggerService:78 - Test Logger
+2019-06-09 20:21:03 ERROR service.LoggerService:67 - Not correct data in file of products
+2019-06-09 20:21:03 WARN  service.LoggerService:61 - Weight not found
+2019-06-09 20:26:07 ERROR service.LoggerService:72 - Not correct data in file of products
+2019-06-09 20:26:07 WARN  service.LoggerService:66 - Weight not found
+2019-06-09 20:27:01 ERROR service.LoggerService:72 - Not correct data in file of products
+2019-06-09 20:27:01 WARN  service.LoggerService:66 - Weight not found
+2019-06-09 20:27:01 ERROR service.LoggerService:72 - Not correct data in file of products
+2019-06-09 20:30:40 ERROR service.LoggerService:71 - Not correct data in file of products
+2019-06-09 20:30:40 WARN  service.LoggerService:65 - Weight not found
+2019-06-09 20:30:40 ERROR service.LoggerService:71 - Not correct data in file of products
+2019-06-09 20:33:03 ERROR service.LoggerService:71 - Not correct data in file of products
+2019-06-09 20:33:03 WARN  service.LoggerService:65 - Weight not found
+2019-06-09 20:33:03 ERROR service.LoggerService:71 - Not correct data in file of products
+2019-06-09 20:44:19 ERROR service.LoggerService:74 - Not correct data in file of products
+2019-06-09 20:44:19 ERROR service.LoggerService:74 - Not correct data in file of products
+2019-06-09 20:44:19 WARN  service.LoggerService:65 - Weight not found
+2019-06-09 21:29:33 ERROR service.LoggerService:41 - Not correct data in file of Kilocalories of products
+2019-06-09 21:29:33 ERROR service.LoggerService:41 - Not correct data in file of Kilocalories of products
+2019-06-09 21:29:33 ERROR service.LoggerService:41 - Not correct data in file of Kilocalories of products
+2019-06-09 21:53:45 ERROR service.LoggerService:82 - Not correct data in file of products
+2019-06-09 21:53:45 ERROR service.LoggerService:82 - Not correct data in file of products
+2019-06-09 21:53:45 WARN  service.LoggerService:73 - Weight not found

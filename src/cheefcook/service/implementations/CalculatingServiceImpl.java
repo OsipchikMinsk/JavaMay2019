@@ -1,30 +1,48 @@
 package cheefcook.service.implementations;
 
-import cheefcook.entity.Salad;
+
 import cheefcook.entity.Vegetable;
 import cheefcook.service.interfaces.CalculatingService;
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class CalculatingServiceImpl implements CalculatingService {
-    public double calculateKiloCalories(Salad salad) {
-        double kiloCalories = 0;
-        for (Map.Entry<Vegetable, Integer> product : salad.getProducts().entrySet()) {
-            kiloCalories += product.getValue();
+    public double calculateKiloCalories(List<Vegetable> products) {
+
+        for (Vegetable vegetable : products) {
+            System.out.println("Vegetable " + vegetable);
         }
-        return kiloCalories;
+        return products.
+                stream().
+                map(Vegetable::getKiloCalories).
+                mapToDouble(Double::doubleValue).
+                sum();
     }
 
-    public  List<Vegetable> sortByKiloCalories(Salad salad) {
-        List<Vegetable> products =  new ArrayList<>();
-        products.addAll(salad.getProducts().keySet());
-        return products.stream().sorted(Comparator.comparing(Vegetable::getKiloCaloriesInG)).collect(Collectors.toList());
+    public List<Vegetable> sortByKiloCalories(List<Vegetable> products) {
+        return products.
+                stream().
+                sorted(Comparator.comparing(Vegetable::getKiloCalories)).
+                collect(Collectors.toList());
     }
 
-    public  List<Vegetable> sortByKiloCaloriesAndKeepingTime(Salad salad) {
-        List<Vegetable> products =  new ArrayList<>();
-        products.addAll(salad.getProducts().keySet());
-        return products.stream().sorted(Comparator.comparing(Vegetable::getKiloCaloriesInG).
-                thenComparing(Comparator.comparing(Vegetable::getKeepingTime))).collect(Collectors.toList());
+    public List<Vegetable> sortByKiloCaloriesAndWeight(List<Vegetable> products) {
+        return products.
+                stream().
+                sorted(Comparator.comparing(Vegetable::getKiloCalories).
+                        thenComparing(Comparator.comparing(Vegetable::getWeightInGr))).
+                collect(Collectors.toList());
+
+    }
+
+    @Override
+    public List<Vegetable> findProductBetweenRangeOfKiloCalories(List<Vegetable> products, int start, int finish) {
+        return products.stream()
+                .filter(prod -> {
+                    double KiloCalories = prod.getKiloCalories();
+                    return KiloCalories >= start && KiloCalories <= finish;
+                })
+                .collect(Collectors.toList());
     }
 }
+

@@ -1,108 +1,94 @@
 package cheefcook.service.implementations;
 
-import cheefcook.entity.Vegetable;
-import cheefcook.entity.vagetables.FruitVegetable;
-import cheefcook.entity.vagetables.GreenVegetable;
-import cheefcook.entity.vagetables.RootVegetable;
+
+import cheefcook.exeption.MyNumberExeption;
+import cheefcook.service.LoggerService;
 import cheefcook.service.interfaces.ParsingFileService;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.lang.reflect.Field;
 import java.util.*;
 
 public class ParsingFileServiceImpl implements ParsingFileService {
+    LoggerService loggerService = LoggerService.getInstance();
+    private static final Logger log = LoggerService.getLog();
+
+
+
     @Override
-    public ArrayList<ArrayList> getSalads(String path) {
-        ArrayList<ArrayList> salads = new ArrayList<ArrayList>();
-        File tempFile = new File(path); //"recipes.txt";
+    public void getKilocaloriesData(String path) {
+        File file = new File(path);
         try {
-            Scanner scanner = new Scanner(tempFile);
-            while (scanner.hasNextLine()) {
-                String[] line = scanner.nextLine().split(",");
-
-                ArrayList<String> salad = new ArrayList<>();
-                int size = line.length;
-                for (int i = 1; i < size; i++) {
-                    salad.add(line[i].substring(1, line[i].length()).toUpperCase());
-                }
-
-                if (salad.size() > 0) {
-                    salads.add(salad);
+            Scanner scanner = new Scanner(file);
+            while (scanner.hasNextLine()){
+                String line = scanner.nextLine();  //спарсили строку
+                String [] productOfData = line.split("\\s+");// распарсили по пороблелам [0] = название продукта, [1] = калорийность на 100 гр
+                if(productOfData.length>1){ //есть ли 2 значения в строке
+                    if((productOfData[0]!= null)||productOfData[0].length()>0){
+                       int kiloCalories = 0;
+                        try {
+                           kiloCalories = Integer.parseInt(productOfData[1]);
+                        }catch (Exception e ){
+                            if (e instanceof NumberFormatException) {
+                                try {
+                                    throw new MyNumberExeption();
+                                } catch (MyNumberExeption myEx) {
+                                    log.warn("Kilocalories not found");
+                                }
+                            }
+                        }
+                        if (kiloCalories > 0) {
+                            kilocaloriesDataOfProducts.put(productOfData[0].toUpperCase(), kiloCalories);
+                        }
+                    } else {
+                        log.warn("Product not found");
+                    }
+                } else {
+                    log.error("Not correct data in file of Kilocalories of products");
                 }
             }
+
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            log.error("File not found", e);
         }
-        return salads;
     }
 
     @Override
-    public HashMap<Vegetable, Integer> getProductFromSaladLine(ArrayList<String> productsWithCalories) {
-        int prodSize = productsWithCalories.size();
-        HashMap<Vegetable, Integer> products = new HashMap<>();
-
-        for (int i = 0; i < prodSize; i++) {
-            String[] prod = productsWithCalories.get(i).split("\\s+");
-            String name = prod[0].toUpperCase();
-            Vegetable vegetable;
-            switch (name) {
-                case "TOMATO":
-                    vegetable = new FruitVegetable(FruitVegetable.listOfFruitVegetable.TOMATO.name(),20);
-                    setKeepingTimeForVegetable(vegetable);
-                    break;
-                case "PEPPER":
-                    vegetable = new FruitVegetable(FruitVegetable.listOfFruitVegetable.PEPPER.name(),30);
-                    setKeepingTimeForVegetable(vegetable);
-                    break;
-                case "CUCUMBER":
-                    vegetable = new FruitVegetable(FruitVegetable.listOfFruitVegetable.CUCUMBER.name(),10);
-                    setKeepingTimeForVegetable(vegetable);
-                    break;
-                case "PARSLEY":
-                    vegetable = new GreenVegetable(GreenVegetable.listOfGreenVegetable.PARSLEY.name(),15);
-                    setKeepingTimeForVegetable(vegetable);
-                    break;
-                case "LETTUCE":
-                    vegetable = new GreenVegetable(GreenVegetable.listOfGreenVegetable.LETTUCE.name(),30);
-                    setKeepingTimeForVegetable(vegetable);
-                    break;
-                case "ARAGULA":
-                    vegetable = new GreenVegetable(GreenVegetable.listOfGreenVegetable.ARAGULA.name(),40);
-                    setKeepingTimeForVegetable(vegetable);
-                    break;
-                case "POTATOES":
-                    vegetable = new RootVegetable(RootVegetable.listOfRootVegetable.POTATOES.name(),60);
-                    setKeepingTimeForVegetable(vegetable);
-                    break;
-                case "CARROT":
-                    vegetable = new RootVegetable(RootVegetable.listOfRootVegetable.CARROT.name(),50);
-                    setKeepingTimeForVegetable(vegetable);
-                    break;
-                case "ONION":
-                    vegetable = new RootVegetable(RootVegetable.listOfRootVegetable.ONION.name(),11);
-                    setKeepingTimeForVegetable(vegetable);
-                    break;
-                default:
-                    vegetable = null;
-            }
-            if (vegetable != null) {
-                products.put(vegetable, Integer.parseInt(prod[1]));
-            }
-        }
-    return products;
-    }
-
-    private void setKeepingTimeForVegetable(Vegetable vegetable) {
+    public ArrayList<String> getProductsFromFile(String path) { //получаем данные из файла продукт и масса
+        ArrayList<String> productList = new ArrayList<>();
+        File file = new File(path);
         try {
-            Field keepingTime = vegetable.getClass().getDeclaredField("KEEPING_TIME");
-            keepingTime.setAccessible(true);
-            Object value = keepingTime.get(vegetable);
-            vegetable.setKeepingTime(Integer.parseInt(value.toString()));
-        } catch (NoSuchFieldException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            Scanner scanner = new Scanner(file);
+            while (scanner.hasNextLine()){
+                String line = scanner.nextLine();
+                String [] products = line.split("\\s+");
+                if(products.length>1){ //есть ли 2 значения в строке
+                    if((products[0]!= null)||products[0].length()>0){
+                      int weight = 0;
+                       try {
+                           weight = Integer.parseInt(products[1]);
+                       }catch (Exception e){
+                           log.warn("Weight not found");
+                       }
+                       if (weight>0){
+                           productList.add(line);
+                       }
+                    } else {
+                        log.warn("Product not found");
+                    }
+                } else {
+                    log.error("Not correct data in file of products");
+                }
+            }
+        }catch (FileNotFoundException e) {
+            log.error("File not found", e);
         }
+        return productList;
+    }
+    public void testPrint (){
+
+        log.warn("Test Logger");
     }
 }

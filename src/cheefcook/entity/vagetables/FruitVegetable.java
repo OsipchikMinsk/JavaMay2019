@@ -3,24 +3,21 @@ package cheefcook.entity.vagetables;
 import cheefcook.entity.Vegetable;
 
 public class FruitVegetable extends Vegetable {
-    final private int KEEPING_TIME = 20;
 
-    public FruitVegetable(String name,double kiloCalories) {
-        super(name,kiloCalories);
-    }
-    public FruitVegetable(){
-    }
+    private final int KEEPING_TIME = 15; //Время хранения в днях
 
-    public int getKeepingTime() {
+    public FruitVegetable(String name, int weightInGr, double kiloCalories) {
+        super(name, weightInGr, kiloCalories);
+    }
+    public int getKEEPING_TIME() {
         return KEEPING_TIME;
     }
 
-    public  enum listOfFruitVegetable {
+    public enum listOfFruitVegetable {
         TOMATO,
         PEPPER,
         CUCUMBER
     }
-
 }
 
 

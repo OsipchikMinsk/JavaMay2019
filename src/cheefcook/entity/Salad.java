@@ -1,30 +1,23 @@
 package cheefcook.entity;
 
-import cheefcook.service.implementations.CalculatingServiceImpl;
-
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
-import java.util.stream.Collectors;
-
 public class Salad   {
-    private String name;
-    HashMap<Vegetable, Integer> products;
-
-    public Salad(String name, HashMap<Vegetable, Integer> products) {
-        this.name = name;
+    List<Vegetable> products;
+    public Salad(List<Vegetable> products) {
         this.products = products;
     }
-
-    public HashMap<Vegetable, Integer> getProducts() {
+    public List<Vegetable> getProducts() {
         return products;
     }
-
-
-
-
-
+    public void setProducts(List<Vegetable> products) {
+        this.products = products;
+    }
 }
+
+
+
+
+
 
 
 

@@ -4,9 +4,12 @@ import cheefcook.entity.Vegetable;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.TreeMap;
+
 
 public interface ParsingFileService {
-     ArrayList<ArrayList> getSalads(String path);
-     HashMap<Vegetable, Integer> getProductFromSaladLine(ArrayList<String>  productsWithCalories);
+     public static HashMap<String,Integer> kilocaloriesDataOfProducts = new HashMap<>();//база данных по калорийности
+     public void getKilocaloriesData(String path);
+     ArrayList<String> getProductsFromFile (String path);
+
+
 }

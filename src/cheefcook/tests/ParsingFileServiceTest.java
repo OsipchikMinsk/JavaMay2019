@@ -4,6 +4,7 @@ import cheefcook.entity.Vegetable;
 import cheefcook.entity.vagetables.FruitVegetable;
 import cheefcook.entity.vagetables.GreenVegetable;
 import cheefcook.entity.vagetables.RootVegetable;
+import cheefcook.service.interfaces.ParsingFileService;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import cheefcook.service.implementations.ParsingFileServiceImpl;
@@ -11,50 +12,54 @@ import cheefcook.service.implementations.ParsingFileServiceImpl;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import static cheefcook.service.interfaces.ParsingFileService.kilocaloriesDataOfProducts;
+
 public class ParsingFileServiceTest {
+
     private ParsingFileServiceImpl parsingFileService = new ParsingFileServiceImpl();
+    private final String PATH_TO_RECIPY = "C:\\Users\\ARTos\\IdeaProjects\\IntroductionToJava\\src\\cheefcook" +
+            "\\resources\\recipes.txt";
 
-    @Test
+   @Test
     void getProductsFromFileTest() {
-        ArrayList<ArrayList<String>> testSaladsList = new ArrayList<>();
-        ArrayList testSalad1 = new ArrayList();
-        testSalad1.add("POTATOES 20");
-        testSalad1.add("PARSLEY 5");
-        testSalad1.add("TOMATO 50");
-        testSalad1.add("LETTUCE 100");
-        testSalad1.add("PEPPER 55");
+        ArrayList<String> testSaladsList = new ArrayList<>();
+        ArrayList testSalad = new ArrayList();
+        testSalad.add("POTATOES 20");
+        testSalad.add("PARSLEY 5");
+        testSalad.add("TOMATO 50");
+        testSalad.add("LETTUCE 100");
+        testSalad.add("PEPPER 55");
+        testSalad.add("CUCUMBER 60");
+        testSalad.add("ARAGULA 20");
+        testSalad.add("CARROT 48");
+        ArrayList<String> productListFromFile = parsingFileService.getProductsFromFile(PATH_TO_RECIPY);
+        int size = testSaladsList.size();
+        for (int i = 0;i<size;i++){
+            Assert.assertEquals(testSalad.get(i),productListFromFile.get(i));
+        }
 
-        System.out.println("test1 :" + testSalad1);
-        ArrayList testSalad2 = new ArrayList();
-        testSalad2.add("CUCUMBER 51");
-        testSalad2.add("ARAGULA 2");
-        testSalad2.add("CARROT 48");
-        testSalad2.add("PEPPER 89");
-        System.out.println("tesr2: " + testSalad2);
-        testSaladsList.add(testSalad1);
-        testSaladsList.add(testSalad2);
-
-        System.out.println("FROM FILE: " + parsingFileService.getSalads("C:\\Users\\ARTos\\IdeaProjects\\chef_cook\\src\\main\\resources\\recipes.txt"));
-        Assert.assertEquals(parsingFileService.getSalads("C:\\Users\\ARTos\\IdeaProjects\\chef_cook\\src\\main\\resources\\recipes.txt"), testSaladsList);
     }
-
     @Test
-    void getProductFromSaladLine() throws AssertionError {
-        ArrayList<String> testSalad1 = new ArrayList();
-        testSalad1.add("POTATOES 20");
-        testSalad1.add("PARSLEY 5");
-        testSalad1.add("TOMATO 50");
-        testSalad1.add("LETTUCE 100");
-        testSalad1.add("PEPPER 55");
-        HashMap<Vegetable, Integer> testProducts = new HashMap<>();
-        testProducts.put(new RootVegetable("POTATOES", 60), 20); //PATATO
-        testProducts.put( new GreenVegetable("PARSLEY",15), 5); //PARSLEY
-        testProducts.put( new FruitVegetable("TOMATO",20), 50); //TOMATO
-        testProducts.put( new GreenVegetable("LETTUCE",30), 100); //LETTUCE
-        testProducts.put( new FruitVegetable("PEPPER",30), 55); //PEPPER
+    void initTestKiloCalData (){
+       HashMap<String,Integer> testKiloCalories = new HashMap<>();
+       testKiloCalories.put("POTATOES", 82);
+       testKiloCalories.put("PARSLEY", 45);
+       testKiloCalories.put("TOMATO", 19);
+       testKiloCalories.put("LETTUCE", 14);
+       testKiloCalories.put("PEPPER", 23);
+       testKiloCalories.put("CUCUMBER", 15);
+       testKiloCalories.put("ARAGULA", 14);
+       testKiloCalories.put("CARROT", 33);
+       final String PATH_TO_CALORIES = "C:\\Users\\ARTos\\IdeaProjects\\IntroductionToJava\\" +
+               "src\\cheefcook\\resources\\kilocalories.txt";
+        parsingFileService.getKilocaloriesData(PATH_TO_CALORIES);
+        Assert.assertEquals(testKiloCalories,kilocaloriesDataOfProducts);
 
-        Assert.assertEquals(parsingFileService.getProductFromSaladLine(testSalad1), testProducts);
     }
+
+
+
+
 }
 
 
